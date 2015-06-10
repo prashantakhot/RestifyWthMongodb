@@ -58,7 +58,7 @@ exports.deleteUser=function(req,res,next){
     })
 }
 
-exports.updateUser=function(req,res,next){
+/*exports.updateUser=function(req,res,next){
 //updating data from user model
 	var postUserData=new user(req.body);
 	console.log('In updateUser req.params.id-->'+req.params.id);
@@ -71,7 +71,7 @@ exports.updateUser=function(req,res,next){
             res.json(userDetils)             
         }
     })
-}
+}*/
 
 exports.updateUser=function(req,res,next){
 user.findById(req.params.id, function (err, userDetils) {
